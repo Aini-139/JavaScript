@@ -1,0 +1,13 @@
+#outer{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background: lightsalmon; 
+ }
+ #inner{
+     width: 300px;
+     height: 300px;
+     margin: 100px  auto  0;
+     background: mediumorchid;
+     text-align: center;
+ }

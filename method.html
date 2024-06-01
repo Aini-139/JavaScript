@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>method</title>
+</head>
+
+<body>
+    <script>
+        document.write("<br><b> Map Method </b>");
+
+        var arr = [10, 20, 30, 40];
+        document.write("<br>Array: " + arr);
+        var b = arr.map(test);
+        document.write("<br>Map Array: " + b);
+
+        function test(x) {
+            return x * 10;
+        }
+
+        var person = [
+
+            { name: "ABC", age: 24 },
+            { name: "EFG", age: 30 },
+            { name: "IJK", age: 20 },
+            { name: "EFG", age: 31, }
+        ];
+        var b = person.map(name);
+        document.write("<br>Map Array: " + b);
+
+        function name(x) {
+            return x.name;
+        }
+
+        document.write("<br><b>String Method </b>");
+       var str="  Javascript  is  a  great  language ";
+       document.write("<br>"+str);
+
+       var a=str.length;
+       document.write("<br>String length: "+a);
+
+       var a=str.toLowerCase();
+       document.write("<br>String in lowercase: "+a);
+
+       var a=str.toUpperCase();
+       document.write("<br>String in upercase: "+a);
+
+       var a=str.includes("great");
+       document.write("<br>String is include: "+a);
+
+       var a=str.startsWith("j");
+       document.write("<br>String startWith: "+a);
+
+       var a=str.endsWith("age");
+       document.write("<br>String endWith: "+a);
+
+       var a=str.search("is");
+       document.write("<br>String search: "+a);
+
+       var a=str.match(/g/g);
+       document.write("<br>String match: "+a);
+
+       var a=str.indexOf("age");
+       document.write("<br>String index: "+a);
+
+       var a=str.lastIndexOf("is");
+       document.write("<br>String lastindexof: "+a);
+
+       var a=str.replace("Javascript", "PHP");
+       document.write("<br>String replace: "+a);
+
+       var a=str.trim();
+       document.write("<br>String trim: "+a);
+
+       var a=str.charAt(23);
+       document.write("<br>String charAt: "+a);
+
+       var a=str.charCodeAt(4);
+       document.write("<br>String charCodeAt: "+a);
+
+       var a=String.fromCharCode(97);
+       document.write("<br>String fromCharCode: "+a);
+
+       var str2="Hello world";
+       var a=str.concat(str2);
+       document.write("<br>String concat: "+a);
+
+       var a=str.split(" ");
+       document.write("<br>String split: "+a);
+
+       var a=str.repeat(2);
+       document.write("<br>String repeat: "+a);
+
+       var a=str.slice(6, 12);
+       document.write("<br>String slice: "+a);
+
+       var a=str.substr(3 , 10);
+       document.write("<br>String substr: "+a);
+
+       var a=str.substring(3 , 10);
+       document.write("<br>String sunstring: "+a);
+
+       var a=str.toString();
+       document.write("<br>String toString: "+ a+20);
+
+       var a=str.valueOf();
+       document.write("<br>String valueOf: "+a);
+
+
+       document.write("<br><b>Number Method </b>");
+       var b=true;
+       document.write("<br>String : "+b);
+
+       var num=Number(b);
+       document.write("<br>String into number : "+  num);
+
+       var num=parseInt(b);
+       document.write("<br> parseInt : "+  num);
+
+       var num=parseFloat(b);
+       document.write("<br> parseFloat  : "+  num);
+
+       var num=isFinite(b);
+       document.write("<br>sFinite : "+  num);
+
+       var num=Number.isInteger(b);
+       document.write("<br>isInteger : "+  num);
+
+       var c=55.3854
+       var num=c.toFixed(2);
+       document.write("<br>toFixed : "+  num);
+
+       var num=c.toPrecision(3);
+       document.write("<br>toPrecision : "+  num);
+      
+
+       document.write("<br><b>Math Method </b>");
+       var c=Math.ceil(3.5);
+       document.write("<br>ceil : "+  c);
+
+       var c=Math.floor(3.5);
+       document.write("<br>Floor : "+  c);
+
+       var c=Math.round(3.80);
+       document.write("<br>Round : "+  c);
+
+       var c=Math.trunc(8.53333);
+       document.write("<br>Trunc : "+  c);
+
+       var c=Math.max(3 ,4, 29, 5, 70, 38);
+       document.write("<br>Max : "+  c);
+
+       var c=Math.min(3, 7, 8, 39,56);
+       document.write("<br>Min : "+  c);
+
+       var c=Math.sqrt(16);
+       document.write("<br>Sqrt : "+  c);
+
+       var c=Math.cbrt(125);
+       document.write("<br>Cbrt : "+  c);
+
+       var c=Math.pow(3, 5);
+       document.write("<br>Pow : "+  c);
+
+       var c=Math.floor(Math.random()*50)+1;
+       document.write("<br>Random : "+  c);
+
+       var c=Math.abs(-20);
+       document.write("<br>ABS : "+  c);
+
+       var c=Math.PI;
+       document.write("<br>PI : "+  c);
+
+       document.write("<br><b>Date Method </b>");
+
+       var now= new Date();
+       
+       document.write("<br>Date : "+  now);
+
+       document.write("<br>DateString : "+  now.toDateString());
+
+       document.write("<br>Date : "+  now.getDate());
+
+       document.write("<br>FullYear : "+  now.getFullYear());
+
+       document.write("<br>Month : "+  now.getMonth());
+
+       document.write("<br>Day : "+  now.getDay());
+
+       document.write("<br>Hours : "+  now.getHours());
+
+       document.write("<br>Minutes : "+  now.getMinutes());
+
+       document.write("<br>Seconds : "+  now.getSeconds());
+
+       document.write("<br>Milliseconda : "+  now.getMilliseconds());
+
+       now.setDate();
+       document.write("<br> Set Date : "+  now);
+
+       now.setFullYear();
+       document.write("<br> Set FullYear : "+  now);
+
+       now.setHours();
+       document.write("<br>Set Date : "+  now);
+
+       now.setMilliseconds();
+       document.write("<br>Set Date : "+  now);
+
+       now.setMinutes();
+       document.write("<br>Set Date : "+  now);
+
+       now.setMonth();
+       document.write("<br>Set Date : "+  now);
+
+       now.setSeconds();
+       document.write("<br>Set Date : "+  now);
+
+
+    </script>
+</body>
+
+</html>

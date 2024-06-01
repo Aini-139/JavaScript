@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        var arr = [5, 10, 20, 30];
+        var a = new Array(3);
+        a[0] = 5;
+        a[1] = "Ali";
+        a[2] = "Sara";
+        var sum = 0;
+        document.write("Array: " + arr)
+        document.write("<br>New Array: " + a)
+
+        for (var i = 0; i <= 3; i++) {
+            document.write("<br>Value at index " + [i] + " is : " + arr[i]);
+            sum = sum + arr[i];
+        }
+        document.write("<br> Total sum : " + sum);
+        document.write("<br><b>Multidimensional array </b>");
+        let salary = [
+            ["ABC", 24, 18000],
+            ["EFG", 30, 30000],
+            ["IJK", 28, 41000],
+            ["EFG", 31, 28000]
+
+        ];
+        for (var i = 0; i <= 3; i++) {
+
+            document.write("<br>Value at index is : " + salary[i]);
+
+        }
+        document.write("<br>Value at index is : " + salary[2][2] + "<br>");
+
+        document.write("Array length:" + salary.length);
+        document.write("<table border='3px'> ");
+        for (var i = 0; i <= 3; i++) {
+
+            document.write("<tr> ");
+
+            for (var j = 0; j <= 3; j++) {
+
+                document.write("<td>" + salary[i][j] + "</td>");
+            }
+            document.write("<tr> ");
+        }
+        document.write("</table> ");
+
+        document.write("<br><b>Modify & Delete Array</b>");
+
+        var arr = [5, 10, 20, 30];
+        document.write("<br>Array: " + arr);
+        arr[2] = "Ali";
+        arr[3] = "Umer"
+        document.write("<br>Modify Array: " + arr)
+        delete arr[2];
+        document.write("<br>Delete Array: " + arr)
+
+        document.write("<br><b>Sort & Reverse Array</b>");
+
+        var arr = [50, 10, 40, 30];
+        document.write("<br>Array: " + arr);
+        arr.sort();
+        document.write("<br>Sort Array: " + arr);
+        arr.reverse();
+        document.write("<br>Reverse Array: " + arr);
+
+
+        document.write("<br><b>Pop & Push Array</b>");
+
+        var arr = [50, 10, 40, 30];
+        document.write("<br>Array: " + arr);
+        arr.pop();
+        document.write("<br>Pop Array: " + arr);
+        arr.push(100);
+        arr.push(70);
+        document.write("<br>Push Array: " + arr);
+
+        document.write("<br><b>Shift & Unshif Array</b>");
+
+        var arr = [50, 10, 40, 30];
+        document.write("<br>Array: " + arr);
+        arr.shift();
+        document.write("<br>Shift Array: " + arr);
+        arr.unshift(100);
+        document.write("<br>Unshift Array: " + arr);
+
+        document.write("<br><b>Concat & Join Array</b>");
+
+        var a = [50, 10, 40, 30];
+        var b = ["Ali", 12, "umer", 30];
+        document.write("<br>Array 1: " + a);
+        document.write("<br>Array 2: " + b);
+        var c = a.concat(b);
+        document.write("<br>Concat Array: " + c);
+        var d = b.join("-");
+        document.write("<br>join Array: " + d);
+
+        document.write("<br><b>Slice & Splice Array</b>");
+        var n = ["John", "Jane", "Mike", "Lucy"];
+        document.write("<br>Array: " + n);
+        var m = n.slice(1, 2);
+        document.write("<br>Slice Array: " + m);
+        n.splice(2, 0, "Ali", "Umer");
+        document.write("<br>Splice Array: " + n);
+
+        document.write("<br><b>isArray</b>");
+        var n = ["John", "Jane", "Mike", "Lucy"];
+        var a = "ali"
+        document.write("<br>Array: " + n);
+        var m = Array.isArray(n);
+        document.write("<br>isArray: " + m);
+        document.write("<br>Array: " + a);
+        var m = Array.isArray(a);
+        document.write("<br>isArray: " + m);
+
+        document.write("<br><b>indexOf & lastIndexOf</b>");
+        var n = ["John", "Jane", "Mike", "Jane", "Lucy", "Jane"];
+        document.write("<br>Array: " + n);
+        var m = n.indexOf("Jane", 2);
+        document.write("<br>Index of value Jane is: " + m);
+        var m = n.lastIndexOf("Jane");
+        document.write("<br>Last Index of value Jane is: " + m);
+
+        document.write("<br><b>Includes Method</b>");
+        var n = ["John", "Jane", "Mike", "Jane", "Lucy", "Jane"];
+        document.write("<br>Array: " + n);
+        var m = n.includes("Jane");
+        document.write("<br>Value is: " + m);
+
+        document.write("<br><b>Some & Every Methods</b>");
+        var age = [5, 10, 20, 30];
+        document.write("<br>Age: " + age);
+        var a = age.some(checkAudlt)
+        document.write("<br>Some:  " + a);
+
+        function checkAudlt(age) {
+            return age >= 18;
+        }
+        var a = age.every(checkAudlt)
+        document.write("<br>Every: " + a);
+
+
+        document.write("<br><b>Find & FindIndex</b>");
+        var age = [5, 10, 20, 30];
+        document.write("<br>Age: " + age);
+        var a = age.find(checkAudlt)
+        document.write("<br>Find:  " + a);
+
+        function checkAudlt(age) {
+            return age >= 18;
+        }
+        var a = age.findIndex(checkAudlt)
+        document.write("<br>FindIndex: " + a);
+
+        document.write("<br><b> Filter array</b>");
+        var age = [5, 10, 20, 30];
+        document.write("<br>Age: " + age);
+        var a = age.filter(checkAudlt)
+        document.write("<br>Filter array:  " + a);
+
+        function checkAudlt(age) {
+            return age >= 18;
+        }
+
+        document.write("<br><b>toString, valueOf & fill Methods</b>");
+
+        var n = ["John", "Jane", "Mike", "Lucy"];
+        n.toString();
+        document.write("<br>toString array:  " + n);
+        var m = ["John", "Jane", "Mike", "Lucy"];
+        m.fill("umer");
+        document.write("<br>Fill array:  " + m);
+
+        document.write("<br><b> forEach Loop</b>");
+
+        var n = ["John", "Jane", "Mike", "Lucy"];
+        n.forEach(function (value, index) {
+            document.write("<br>array value:  " + value + "  at index  :" + index);
+
+        });
+
+    </script>
+</body>
+
+</html>

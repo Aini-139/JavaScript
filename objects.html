@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <script>
+        var person = {
+            fname: "Umer",
+            lname: "Ali",
+
+            age: 30,
+            country: "Pakistan",
+            arr: [10, 'hum', 30],
+            living: {
+                city: "Gujranwala"
+            },
+            salary: function () {
+                return 20000;
+            },
+            fullname: function () {
+                return this.fname + " " + this.lname;
+            }
+        };
+        document.write("Name:" + person.fname);
+        document.write("<br>Age:" + person.age);
+        document.write("<br>Country:" + person.country);
+        document.write("<br>Array:" + person.arr);
+        document.write("<br>Salary:" + person.salary());
+        document.write("<br>Fullname:" + person.fullname());
+        document.write("<br>Salary:" + person.salary());
+        document.write("<br>City:" + person.living.city);
+
+        document.write("<br><b>Array of Objects </b>");
+        var person = [
+
+            { name: "ABC", age: 24 },
+            { name: "EFG", age: 30 },
+            { name: "IJK", age: 20 },
+            { name: "EFG", age: 31, }
+        ];
+        for (var i = 0; i < person.length; i++) {
+            document.write(person[i].name + " " + person[i].age + "<br>");
+
+        }
+
+        document.write("<br><b> Const Variable </b>");
+        const a = {
+            name: "Umer",
+            age: 30,
+        };
+        document.write("<br>Name:" + a.name);
+        document.write("<br>Age:" + a.age);
+        a.name = "Ali";
+        document.write("<br>Update Name:" + a.name);
+
+        document.write("<br><b> For in Loop</b>");
+        var p = {
+            fname: "Umer",
+            lname: "Ali",
+            age: 30,
+            country: "Pakistan"
+        };
+        for (var key in p) {
+            document.write("<br>"+key+":" + p[key]);
+        }
+
+    </script>
+</body>
+
+</html>

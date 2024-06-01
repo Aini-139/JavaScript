@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statement</title>
+</head>
+
+<body>
+    <script>
+        var a = 20;
+        var b = 5;
+        var c;
+        var day = 1;
+        document.write("First value:", a);
+        document.write("<br>");
+        document.write("Second value:", b);
+        document.write("<br>");
+
+        if (a > 10) {
+            document.write("A is greater.<br>")
+        }
+        if (a > 10) {
+            document.write("A is greater.<br>");
+        }
+        else {
+            document.write("A is not greater<br>");
+        }
+
+        if (a > 10) {
+            document.write("A is greater.<br>")
+        } else if (b > 10) {
+            document.write("B is greater.<br>")
+        } else {
+            document.write("B is not greater.<br>")
+
+        }
+        document.write("<b>conditional operator</b><br>");
+        c = "Value is " + (a > 10 ? "True" : "False");
+        document.write(c);
+
+        document.write("<br><b>Switch case</b><br>");
+        switch (day) {
+            case 1:
+                document.write("Today is Monday");
+
+                break;
+            case 2:
+                document.write("Today is Tuesday");
+
+                break;
+            case 3:
+                document.write("Today is Wednesday");
+
+                break;
+            case 4:
+                document.write("Today is Thursday");
+
+                break;
+            case 5:
+                document.write("Today is Friday");
+
+                break;
+            case 6:
+                document.write("Today is Saturday");
+
+                break; case value:
+                document.write("Today is Sunday");
+
+                break;
+            default:
+                document.write("Enter valid week day");
+
+                break;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function-and-event</title>
+
+    <script>
+        function sample() {
+            document.write("This is simple function<br>");
+        }
+        sample();
+        function sampleP(a, b) {
+            document.write("This is paramatric function: ", a + b);
+
+        }
+        sampleP(10, 20);
+        function sampleR(a, b) {
+            var z = a + b;
+            return z;
+
+        }
+        sum = sampleR(50, 20);
+        document.write("<br>This is return value function: ");
+        document.write(sum);
+        document.write("<br>");
+
+        function hello() {
+            document.write("This is event example");
+        }
+    </script>
+</head>
+
+<body onresize="hello()">
+
+    <button onclick="hello()">click me</button>
+    <P ondblclick="hello()">This is double click event</P>
+    <P oncontextmenu="hello()">This is right click event</P>
+    <P onmouseenter="hello()">This is mouse enter event</P>
+    <P onmousedown="hello()">This is mouse down event</P>
+    <P onmouseup="hello()">This is mouse up event</P>
+    <P onmouseup="hello()">This is mouse up event</P>
+
+</body>
+
+</html>

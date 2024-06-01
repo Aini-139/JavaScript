@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome console</title>
+</head>
+
+<body>
+    <h1 id="main">Chrome <SPan>console</SPan></h1>
+    <script>
+        var a = 50;
+
+        console.time("test");
+        console.log("display value:");
+        console.log(a);
+
+        console.log("value with addition:");
+        console.log(a + 5);
+
+        console.log("create array:");
+        console.log([1, 2, 3]);
+
+        console.log("create table:");
+        console.table([1, 2, 3]);
+
+        console.error("somthing is wrong");
+        console.warn("This is warning");
+
+        console.log("display time:");
+        console.timeEnd("test");
+
+        // console.clear();
+
+       console.log(document.getElementById('main'));
+       console.log(document.getElementById('main').innerText);
+       console.log(document.getElementById('main').innerHTML);
+
+    </script>
+</body>
+
+</html>
